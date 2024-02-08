@@ -1,0 +1,110 @@
+mql5
+// Program: Exceptional for the Win MT4
+// Developer: Forex Robot Easy Team
+// Developer's site: forexroboteasy.com
+
+// Include necessary libraries
+#include <Trade\Trade.mqh>
+#include <ChartObjects\ChartObjects.mqh>
+#include <Timeseries\Timeseries.mqh>
+
+// Define constants for leverage options
+#define STANDARD_LEVERAGE 30
+#define MEDIUM_LEVERAGE 100
+
+// Define constants for risk settings
+#define LOW_RISK 1
+#define MEDIUM_RISK 2
+
+// Define necessary functions and features
+void ExecuteBuyOrder(double lotSize, double stopLoss, double takeProfit)
+{
+    // Add code to execute a buy order based on market conditions
+}
+
+void ExecuteSellOrder(double lotSize, double stopLoss, double takeProfit)
+{
+    // Add code to execute a sell order based on market conditions
+}
+
+void AdjustTradingParameters()
+{
+    // Add code to adjust trading parameters based on market dynamics
+}
+
+double CalculateRisk(double accountBalance, int leverageOption, int riskSetting)
+{
+    // Add code to calculate the risk based on leverage option and risk setting
+    double risk = 0.0;
+    
+    if (leverageOption == STANDARD_LEVERAGE)
+    {
+        if (riskSetting == LOW_RISK)
+        {
+            risk = accountBalance * 0.005;
+        }
+    }
+    else if (leverageOption == MEDIUM_LEVERAGE)
+    {
+        if (riskSetting == MEDIUM_RISK)
+        {
+            risk = accountBalance * 0.01;
+        }
+    }
+    
+    return risk;
+}
+
+void RiskManagement(double accountBalance, int leverageOption, int riskSetting)
+{
+    double risk = CalculateRisk(accountBalance, leverageOption, riskSetting);
+    
+    // Add code to implement risk management features to prevent excessive losses
+}
+
+void TrackAndReportTradeOrder()
+{
+    // Add code to track and report trade order
+}
+
+// Entry point of the program
+int OnInit()
+{
+    // Add code to initialize the program
+    
+    return INIT_SUCCEEDED;
+}
+
+void OnDeinit(const int reason)
+{
+    // Add code to deinitialize the program
+}
+
+void OnTick()
+{
+    // Add code to execute trading logic on each tick
+    AdjustTradingParameters();
+    
+    // Add code to stress-test the algorithm using real tick data from 2018 to the present
+    
+    // Add code to demonstrate impressive performance with consistent live trading results over a minimum of five years
+    
+    // Add code to implement flexible leverage options tailored to different risk appetites
+    RiskManagement(6000, STANDARD_LEVERAGE, LOW_RISK);
+    RiskManagement(1000, MEDIUM_LEVERAGE, MEDIUM_RISK);
+    
+    // Add code to implement necessary trading functions and features
+    ExecuteBuyOrder(0.1, 1.0, 2.0);
+    ExecuteSellOrder(0.1, 1.0, 2.0);
+    TrackAndReportTradeOrder();
+}
+
+void OnChartEvent(const int id, const long &lparam, const double &dparam, const string &sparam)
+{
+    // Add code to handle chart events
+}
+
+void OnTimer()
+{
+    // Add code to handle timer events
+}
